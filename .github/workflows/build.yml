@@ -1,0 +1,20 @@
+name: build-mod
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+      - name: Install the mod tool
+        run: cargo install --locked --git https://github.com/arismoko/horizon cargo-horizon-mod
+      - name: Build the mod
+        run: cargo horizon-mod build --wasm
+      - uses: actions/upload-artifact@v4
+        with:
+          name: totem-helper-hmod
+          path: target/horizon-mod/*.hmod
