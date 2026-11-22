@@ -1,0 +1,9 @@
+id = "totem_helper"
+name = "Totem Helper"
+version = "0.1.0"
+description = "Test build: a small box on the screen."
+authors = ["me"]
+license = "MIT"
+api = "0.2"
+side = "client"
+capabilities = ["registries"]
