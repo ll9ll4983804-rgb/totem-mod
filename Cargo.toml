@@ -9,4 +9,4 @@ publish = false
 horizon-mod-api = { path = ".horizon/sdk/api/crates/horizon-mod-api" }
 
 [package.metadata.horizon]
-sdk = "0a875da91dbb0fdcb7ba8c42c11341aa229af51a"
+sdk = "4dc6455d4a6773224792eb1f121a9b939dff3170"
