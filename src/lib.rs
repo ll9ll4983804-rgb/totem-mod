@@ -18,7 +18,7 @@ if !host.on(ID) { return; }
         let draw = &mut *event.draw;
         let width = draw.text_width(text) + 2.0 * PADDING;
         let height = LINE + PADDING;
-        let (x, y) = event.corners.place(CORNER, width, height);
+        let (x, y) = (100.0, 20.0);
         draw.fill([x, y, width, height], BACKGROUND);
         draw.text(text, [x + PADDING, y + PADDING], INK, true);
     }
